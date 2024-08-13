@@ -1,52 +1,25 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Feature Not Bad by Felippe Regazio
 
 Original Project: [https://github.com/felippe-regazio/notbad](https://github.com/felippe-regazio/notbad)
 
-Currently, two official plugins are available:
+## How to use it in your projects?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+First, fork the project.
 
-## Expanding the ESLint configuration
+Then, access `App.tsx` and copy everything inside it - if you just want a personalized page - in the case of Next, you can copy and change the name of the function instead of using App.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The application is already written in Typescript, so it is already adapted and working.
 
-- Configure the top-level `parserOptions` property like this:
+On line 109, `infoButtonAction` is the developer's information if the user clicks on the information button present in the feature.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+On line 105, `closeButtonAction` you can change the action when user clicks on X.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+On line 133, in the `submit` function, through there you will process the information, whether you call a backend, whether you call a webhook, is up to you.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+The `index.css` file has all the project content, it tried to be adapted for Styled Components, but it didn't work, possibly something to do with server-side rendering - I didn't test it in depth.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Therefore, you can use it globally and it will not interfere with other classes already written. As in my case, which I used in another project with styled-components, and declared it globally, it didn't interfere. Pay attention to styling classes through the className and not through the tag in your projects, otherwise, some things may actually be conflicting, check the code to find out what may interfere globally.
+
+If you have any questions, you can look for me on Twitter > @Yagasaki7K and I'll help you.
+
+Feel free to clone this project and give suggestions for improvements through pull requests or use it in your projects.
