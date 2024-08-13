@@ -2,6 +2,8 @@
 
 Original Project: [https://github.com/felippe-regazio/notbad](https://github.com/felippe-regazio/notbad)
 
+This project is working with Bun, React, Vite and Typescript. Writing by Anderson "Yagasaki" Marlon.
+
 ## How to use it in your projects?
 
 First, fork the project.
